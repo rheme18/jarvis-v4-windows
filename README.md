@@ -42,6 +42,8 @@ Gemini API anahtarı sesli yapay zekâ özellikleri içindir; Google Gmail OAuth
 
 Silme, taşıma, üzerine yazma, komut satırı ve güç işlemleri gibi riskli adımlarda onay akışı kullanılabilir. Self-healing veya güvenlik araçları her sistem sorununu otomatik çözme garantisi vermez.
 
+<img width="1320" height="707" alt="image" src="https://github.com/user-attachments/assets/9e00e6ea-f3e9-433e-b456-3a32c4a1bd81" />
+
 ### 👁️ Kamera, ekran ve çevresel araçlar
 
 - Aktif pencerenin ekran görüntüsünü analiz ederek ekrandaki içerik veya hata hakkında yardım alma.
