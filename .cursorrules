@@ -1,0 +1,10 @@
+# JARVIS V2 - AI Coding Instincts (Claude & Codex)
+
+## 🎯 Geliştirici Felsefesi
+- **Production-Level Kalite:** Asla eksik kod, placeholder (`# buraya kod gelecek`) veya yarım kalmış fonksiyonlar bırakma. Tüm bağımlılıkları ve dosya yapısıyla tam kod üret.
+- **Kök Neden Analizi:** Bir bug bulduğunda veya hata çözdüğünde, sadece sonucu düzeltme. Önce hatanın kök nedenini açıkla, sonra sürdürülebilir çözümü yaz.
+- **Güvenlik ve Performans:** Windows ortamına, dosya yollarına ve asenkron (async/await) işlemlere tam uyumlu kod yaz. Edge case'leri ve hata yakalama (`try-except`) bloklarını asla atlama.
+
+## 🛠️ Kurallar ve Stil
+- Kod mimarisini her zaman ölçeklenebilir ve geriye dönük uyumlu (backward compatible) tut.
+- Açıklamalarda neyi, neden yaptığını mantığıyla anlat; ezber bilgi verme.
