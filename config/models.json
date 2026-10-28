@@ -1,0 +1,11 @@
+{
+  "live_model": "models/gemini-2.5-flash-native-audio-latest",
+  "groq": {
+    "enabled": true,
+    "text_model": "llama-3.3-70b-versatile",
+    "stt_model": "whisper-large-v3",
+    "fallback_model": "llama-3.1-8b-instant"
+  },
+  "skills_enabled": true,
+  "plugins_enabled": true
+}

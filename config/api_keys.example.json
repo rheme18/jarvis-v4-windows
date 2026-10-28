@@ -1,0 +1,16 @@
+{
+  "gemini_api_key": "",
+  "claude_api_key": "",
+  "claude_model": "claude-sonnet-4-5-20250929",
+  "voice": "Charon",
+  "youtube_api_key": "",
+  "youtube_channel_handle": "",
+  "telegram_bot_token": "",
+  "github_token": "",
+  "github_owner": "",
+  "vercel_token": "",
+  "vercel_team_id": "",
+  "google_credentials_file": "config/google_credentials.json",
+  "google_token_file": "config/google_token.json",
+  "gmail_user_id": "me"
+}

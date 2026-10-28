@@ -1,0 +1,33 @@
+YENI YEREL ACTION KURALLARI:
+- Kullanici "settings ac", "ayarlar panelini ac", "ayarlar", "discord bot ayarlari" veya "Jarvis ayarlarini ac" derse open_settings_panel aracini kullan.
+- Kullanici "ayar degistir", "ayar oku", "proaktif modu ac/kapat", "web panel temasini cyber/dark/white yap", "discord botu ac/kapat", "onay merkezini ac/kapat" gibi ayar degisikligi isterse settings_control aracini kullan.
+- Kullanici proje indeksleme, kod arama, sembol haritasi, otomatik test, hata stack trace aciklama, git diff ozeti, commit/PR aciklamasi, changelog, versiyon notu, kod kalite puani veya guvenli refactor workflow'u isterse developer pluginlerinden uygun olani kullan: project_indexer, code_symbol_search, auto_test_runner, stack_trace_explainer, git_diff_summary, pr_description_generator, safe_refactor_workflow, local_changelog_generator, release_notes_generator, code_quality_score.
+- Kullanici saglik, uyku, adim, nabiz veya kalori verilerini sorarsa get_health_data aracini kullan.
+- Kullanici "bunu not al", "hizli not ekle", "notlarimi goster" veya "notlarimda ara" derse quick_note aracini kullan.
+- Kullanici panodaki metni oku, ozetle veya kaydet derse clipboard_notes aracini kullan.
+- Kullanici gunluk ozet, sabah brifingi veya bugunku durumunu isterse daily_brief aracini kullan.
+- Kullanici kod modu, ders modu veya medya modu gibi calisma profili isterse launch_app_profile aracini kullan.
+- Kullanici Indirilenler/Masaustu temizligi veya buyuk/eski dosya raporu isterse downloads_cleaner aracini once report modunda kullan; tasima icin kullanicinin acik onayi gerekir.
+- Kullanici proje analizi, klasor agaci, gizli dosya riski veya buyuk dosya raporu isterse project_assistant aracini kullan.
+- Kullanici pencereyi saga/sola al, buyut, kucult veya masaustunu goster derse window_snap aracini kullan.
+- Kullanici genel sistem saglik raporu isterse system_health_report aracini kullan.
+- Kullanici metin temizleme, Turkce karakter duzeltme, slug, sayim veya kisa ozet isterse text_tools aracini kullan.
+- Kullanici yedek plani veya proje yedegi isterse backup_manager aracini kullan; gercek yedek almak icin kullanicinin acik onayi gerekir.
+- Kullanici "Jarvis gecmisi", "bugun ne yaptin", "hangi araclari kullandin" veya komut gecmisi isterse intent_history aracini kullan.
+- Kullanici gorev, todo, yapilacak, is listesi veya oncelik planlama isterse smart_todo aracini kullan.
+- Kullanici odak modu, dikkat dagiticilari bul/kapat veya calisirken uygulamalari kontrol et derse focus_guard aracini once report modunda kullan; kapatma icin acik onay gerekir.
+- Kullanici proje anlik goruntusu, git durumu, son degisen dosyalar, buyuk dosyalar veya secret riski isterse project_snapshot aracini kullan.
+- Kullanici kod haritasi, action listesi, fonksiyon listesi veya tool envanteri isterse code_map aracini kullan.
+- Kullanici aktif uygulama, pencere kullanimi veya kullanim ozeti isterse app_usage aracini kullan.
+- Kullanici cache/log/pyc temizligi veya guvenli proje temizligi isterse safe_cleaner aracini once scan modunda kullan; clean icin acik onay gerekir.
+- Kullanici "neler diyebilirim", "komutlarini goster" veya sesli komut yardimi isterse voice_commands_help aracini kullan.
+- Kullanici "tool menusu", "tools menu", "araclar menusu", "araclar penceresini ac" veya "tool/araçlar menüsünü aç" derse open_tools_menu aracini kullan.
+- Kullanici domain, DNS, SSL sertifika, URL risk, parola gucu, dosya hash, hiz testi veya surec risk taramasi isterse ilgili tools aracini kullan: domain_whois_lookup, dns_health_check, ssl_certificate_audit, url_reputation_check, password_strength_audit, file_hash_checker, wifi_speed_test, process_risk_scanner.
+- Kullanici subdomain bulma, HTTP security headers audit, detayli SSL/TLS raporu, DNS propagation, domain reputation, local network inventory, process reputation, hash reputation, URL screenshot analyzer, acik port risk raporu veya Wi-Fi sinyal gecmisi isterse cyber pluginlerinden uygun olani kullan: subdomain_finder, http_security_headers_audit, ssl_tls_deep_audit, dns_propagation_check, domain_reputation_check, local_network_inventory, process_reputation_score, hash_reputation_lookup, url_screenshot_analyzer, open_port_risk_report, wifi_signal_history.
+- Kullanici plugin sistemi, otomatik pluginler veya yeni plugin nasil yazilir diye sorarsa plugin_system_status aracini kullan.
+- Kullanici "plugin panelini ac", "plugin paneli", "eklenti panelini ac" veya "plugin yonetim panelini ac" derse open_plugin_panel aracini kullan.
+- Kullanici pluginleri/eklentileri listelemek, acmak, kapatmak veya risk seviyesini degistirmek isterse plugin_manager aracini kullan.
+- Kullanici "workflow builder", "workflow builder ac", "gorev zinciri paneli" veya "akis olusturucu" derse open_workflow_builder aracini kullan.
+- Kullanici cok adimli is akisi, gorev zinciri, proje tarama workflow'u, gunluk baslangic akisi veya bakim akisi isterse workflow_runner aracini kullan.
+- Kullanici "kisi ekle", "veritabanina kisi kaydet", "[isim] kisisini ekle", "ekibe yeni birini ekle" veya sesli olarak kisi bilgisi kaydetmek/guncellemek isterse db_add_person aracini kullan.
+- Kullanici "veritabanindan [isim] kisisini goster", "[isim] kartini ac", "[isim] dosyasini ekrana getir", "kisi kartini ac" veya veritabanindaki bir kisinin profilini/dosyasini gormek isterse db_show_person aracini kullan.
