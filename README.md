@@ -19,39 +19,84 @@
 
 ## ✨ Neler yapabilir?
 
-### 🎙️ Sesli asistan
+J.A.R.V.I.S V4, tek bir sohbet penceresinden fazlası olacak şekilde tasarlandı: sesli asistanı, Windows araçlarını, günlük iş akışlarını ve ayrı HUD panellerini aynı masaüstü uygulamasında toplar. Aşağıdaki özellikler kaynak kodunda bulunan modül ve araçlara dayanır; bazıları hesap, anahtar, izin veya ek paket gerektirir.
 
-- Gemini Live ile gerçek zamanlı sesli görüşme ve yazılı komutlar.
-- Mikrofon, kamera ve konuşma ayarları için hızlı kontroller.
-- F8 ile ana panel ve sürüklenebilir Yüzen Ada arasında geçiş.
+### 🎙️ Sesli asistan ve komut akışı
 
-### 🪟 Windows ve masaüstü
+- Gemini Live ile gerçek zamanlı sesli görüşme ve metin kutusundan yazılı komut gönderme.
+- Mikrofonu sessize alma, konuşmayı duraklatma/sürdürme, kamera akışını açma/kapatma ve ses tercihlerini düzenleme.
+- Hızlı komut paleti ile araçları arama ve başlatma; sık kullanılan uygulama ve çalışma profillerini App Hub’dan açma.
+- Önemli tercihleri yerel belleğe kaydetme ve kullanıcının isteğiyle bellek kayıtlarını silme.
+- İlk açılışta Gemini API anahtarı yoksa ayar ekranından anahtar girişi.
 
-- Uygulama başlatma, pencere ve sistem bilgilerini yönetme.
-- Dosya araçları, pano yardımcısı, hızlı notlar ve yerel yedekleme.
-- Kamera akışı, fotoğraf çekme, ekran analizi ve isteğe bağlı el hareketi kontrolü.
+Gemini API anahtarı sesli yapay zekâ özellikleri içindir; Google Gmail OAuth kimlik dosyasıyla aynı şey değildir.
 
-### ☁️ Entegrasyonlar
+### 🪟 Windows kontrolü ve masaüstü işleri
 
-- Gmail’de e-posta arama ve etiketleri listeleme; Google Drive’da dosya arama.
-- Google Calendar etkinliklerini okuma ve Google Tasks hatırlatıcıları.
-- Yapılandırıldığında GitHub, Vercel, Telegram, YouTube ve Spotify araçları.
-- `CLAUDE_API_KEY` ayarlandığında Claude API ile kod yazma ve inceleme yardımı.
+- Spotify, Chrome, Terminal ve Dosya Gezgini gibi uygulamaları adlarıyla açma; sık kullanılanları App Hub profillerinde toplama.
+- Açık pencereleri listeleme, pencereye odaklanma, pencereyi kapatma, ekranı bölme/snap etme ve tüm pencereleri küçültme.
+- Pil, CPU, RAM, disk, saat, tarih ve ağ durumunu görüntüleme; canlı sistem panosunda donanım ve süreç özetini izleme.
+- Sistem ve uygulama sesini değiştirme/sessize alma, ekran parlaklığını ayarlama ve Windows bildirimi gösterme.
+- Dosya ve klasör arama, inceleme, okuma, yazma, kopyalama, taşıma ve hash alma; indirme temizliği ve yerel yedek planlama.
+- Pano yardımcısı, hızlı notlar, Ghost Typer ile odaktaki pencereye metin yazma ve seçili sistem sorunları için self-healing yardımcıları.
 
-Harici servisler API anahtarı, OAuth izni veya ek yapılandırma gerektirebilir. Gmail bağlantısının mevcut kapsamı e-postaları okumaya yöneliktir; e-posta göndermez veya silmez.
+Silme, taşıma, üzerine yazma, komut satırı ve güç işlemleri gibi riskli adımlarda onay akışı kullanılabilir. Self-healing veya güvenlik araçları her sistem sorununu otomatik çözme garantisi vermez.
 
-### 🧠 Günlük işler
+### 👁️ Kamera, ekran ve çevresel araçlar
 
-- Kişi kartları, notlar, hatırlatıcılar ve yerel bellek.
-- Odak sayacı, günlük brifing, yapılacaklar ve çalışma zamanlayıcısı.
-- App Hub profilleri, canlı sistem panosu ve özelleştirilebilir HUD renk/efekt ayarları.
+- Aktif pencerenin ekran görüntüsünü analiz ederek ekrandaki içerik veya hata hakkında yardım alma.
+- Webcam akışını açma, kameradan fotoğraf çekme ve MediaPipe/OpenCV mevcutsa el hareketi kontrolünü kullanma.
+- Yüz doğrulama/Paranoid Mode seçenekleriyle oda güvenliği işlevlerini yapılandırma.
+- Web araması veya URL açma, hava durumu sorgusu, YouTube/Spotify içeriği açma ve herkese açık YouTube kanal istatistiklerini görüntüleme.
 
-### 🕹️ Eğlence ve yardımcı araçlar
+Kamera, ekran ve biyometrik özellikler donanım/izin gerektirir. Yüz profili ve çekilen fotoğraflar yerel kişisel veri sayılır; paylaşılacak depoya koyulmamalıdır.
 
-- Tetris, Snake, Cyber-Pong, refleks testi ve JARVIS trivia.
-- DNS, IP, domain, SSL, dosya hash’i ve parola gücü gibi kontroller.
+### ☁️ Google ve diğer servis bağlantıları
 
-Ağ kontrollerini yalnızca kendi cihazlarında veya izinli sistemlerde kullan. Hassas dosya ve sistem işlemleri onay isteyebilir.
+- **Gmail:** son postayı özetleme, arama sorgusuyla ileti bulma ve etiketleri listeleme. OAuth kapsamı `gmail.readonly`; bu bağlantı e-posta göndermez, silmez veya değiştirmez.
+- **Google Drive:** dosya adına göre arama.
+- **Google Calendar:** etkinlikleri okuma; etkinlik ekleme/silme akışı Google Calendar sayfasını tarayıcıda açar ve kullanıcı orada tamamlar.
+- **Google Tasks:** hatırlatıcı ekleme, listeleme ve silme; kimlik doğrulama hazır değilse yerel hatırlatıcı yedeği kullanılabilir.
+- **GitHub ve Vercel:** token ayarlandıktan sonra depo/issue/PR/workflow bilgileri ve deployment/proje durumları gibi işlemler.
+- **Claude API:** `CLAUDE_API_KEY` ayarlanırsa kod yazma, kod inceleme, refactor ve özellik planlama yardımı.
+- **WhatsApp, Telegram, YouTube ve Spotify:** uygun uygulama, token, hesap veya API ayarları olduğunda ilgili mesajlaşma/medya araçları.
+
+Entegrasyonlar varsayılan olarak hesaplara giriş yapmaz. İlk OAuth bağlantısında kullanıcı tarayıcıdaki izin ekranını kendisi onaylar. Gmail kurulumu için [Gmail bölümüne](#gmail-kurulumu) bak.
+
+### 🧠 Üretkenlik, hafıza ve otomasyon
+
+- Kişisel yerel veritabanında kişi kartı, not, günlük ve proje kaydı oluşturma; kayıtları arama ve kişi kartı penceresini açma.
+- Hatırlatıcı ve yapılacaklar; odak/Pomodoro sayacı, çalışma zamanlayıcısı ve LGS çalışma desteği.
+- Günlük brifingde sistem, hava durumu, takvim ve seçilen diğer özetleri bir araya getirme.
+- Ödev mesajlarından görev çıkarmaya, çalışma planı oluşturmaya ve rutin adımları otomatikleştirmeye yönelik yardımcılar.
+- İş akışı oluşturucu ile araç adımlarını bir zincirde düzenleme, kaydetme ve çalıştırma.
+- Yerel proje özeti/anlık görüntüsü ve kullanıcı profili bağlamı gibi araçlarla tekrarlanan işleri kolaylaştırma.
+
+Yerel bellek, kişi kayıtları, hatırlatıcılar, puanlar ve tercihler ilk çalıştırmada veya kullanım sırasında proje klasöründe dosyalar oluşturabilir. Gerçek kullanıcı verilerini GitHub’a eklemeyin.
+
+### 🧰 Geliştirici becerileri ve eklentiler
+
+- Skill kitaplığı becerileri listeleyip arama ve seçilen becerinin talimatlarını okuma akışı sağlar. Depoda PDF, DOCX, XLSX, PPTX, web tasarımı, iletişim, görsel üretim ve MCP gibi alanlarda beceri içerikleri bulunur.
+- Claude plugin kitaplığı plugin kaynaklarını ve bileşenlerini incelemeye yardımcı olur; depoda bulunmaları, harici entegrasyonların otomatik olarak bağlandığı anlamına gelmez.
+- GitHub/Vercel kontrol araçları, kod haritası, proje yardımcısı, workflow araçları ve isteğe bağlı Claude API geliştirici akışları bulunur.
+- Bazı plugin’ler kendi komut satırı aracı, OAuth bağlantısı, API anahtarı veya ek çalışma zamanı ister.
+
+Skill ve plugin içeriklerinin ayrıntısı için [envanter belgesine](JARVIS_SKILL_PLUGIN_ENVANTERI.md) bak.
+
+### 🛡️ Ağ, güvenlik ve metin yardımcıları
+
+- IP, DNS, domain/WHOIS, SSL sertifikası, URL itibar sinyali ve Wi-Fi bağlantı/hız kontrolleri.
+- Yerel süreçler için temel risk sinyalleri; parola gücü, dosya hash’i ve AES/Fernet tabanlı metin şifreleme yardımcıları.
+- Metin/JSON, Base64, renk ve kelime sayımı gibi hızlı araçlar.
+
+Bu araçlar kapsamlı antivirüs veya profesyonel penetrasyon testi değildir. Ağ taramalarını yalnızca kendi cihazlarında veya açıkça izin aldığın sistemlerde çalıştır.
+
+### 🕹️ Oyunlar ve görünüm
+
+- Cyber Arcade içinde Tetris, Snake, Cyber-Pong, refleks testi ve JARVIS trivia.
+- HUD temaları, özel neon vurgu rengi, animasyon/efekt yoğunluğu, ses tercihleri ve başlangıç seçenekleri.
+- Sürüklenebilir Yüzen Ada: F8 ile ana panelden geçiş, Ada’daki X ile ana arayüze dönüş; ana arayüzdeki X uygulamayı kapatır, **ARKA PLAN** düğmesi ise JARVIS’i çalışır bırakır.
+- Tam ekran, hızlı komut paleti, canlı sistem panosu, ayarlar, App Hub ve ayrı araç/oyun pencereleri.
 
 ## 💻 Gereksinimler
 
